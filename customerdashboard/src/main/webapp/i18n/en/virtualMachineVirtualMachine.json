@@ -1,0 +1,33 @@
+{
+  "customerdashboardApp": {
+    "virtualMachineVirtualMachine": {
+      "home": {
+        "title": "Virtual Machines",
+        "createLabel": "Create a new Virtual Machine",
+        "createOrEditLabel": "Create or edit a Virtual Machine",
+        "notFound": "No Virtual Machines found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Virtual Machine {{ id }}?"
+      },
+      "detail": {
+        "title": "Virtual Machine"
+      },
+      "name": "Name",
+      "accountid": "Accountid",
+      "accountName": "Account Name",
+      "cpu": "Cpu",
+      "ram": "Ram",
+      "disk": "Disk",
+      "traffic": "Traffic",
+      "template": "Template"
+    }
+  },
+  "virtualMachineApp": {
+    "virtualMachineVirtualMachine": {
+      "created": "A new Virtual Machine is created with identifier {{ param }}",
+      "updated": "A Virtual Machine is updated with identifier {{ param }}",
+      "deleted": "A Virtual Machine is deleted with identifier {{ param }}"
+    }
+  }
+}

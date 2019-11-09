@@ -1,0 +1,53 @@
+{
+    "name": "VirtualMachine",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "accountid",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "accountName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cpu",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "ram",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "disk",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "traffic",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "template",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191106165842",
+    "entityTableName": "virtual_machine",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": [
+        "admindashboard",
+        "customerdashboard",
+        "virtualMachine"
+    ],
+    "microserviceName": "virtualMachine"
+}

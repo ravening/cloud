@@ -1,0 +1,45 @@
+{
+    "name": "Vps",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "cpu",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "ram",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "disk",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "traffic",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "template",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191106165840",
+    "entityTableName": "vps",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": [
+        "admindashboard"
+    ]
+}

@@ -1,0 +1,27 @@
+{
+  "admindashboardApp": {
+    "orderServiceOrderVps": {
+      "home": {
+        "title": "OrderVps",
+        "createLabel": "Créer un nouveau Order Vps",
+        "createOrEditLabel": "Créer ou éditer un Order Vps",
+        "notFound": "Aucun Order Vps trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Order Vps {{ id }} ?"
+      },
+      "detail": {
+        "title": "Order Vps"
+      },
+      "name": "Name",
+      "vpspack": "Vpspack"
+    }
+  },
+  "orderServiceApp": {
+    "orderServiceOrderVps": {
+      "created": "Un nouveau Order Vps a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Order Vps avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Order Vps avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

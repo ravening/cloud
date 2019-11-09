@@ -1,0 +1,49 @@
+{
+    "name": "PrivateCloud",
+    "fields": [
+        {
+            "fieldName": "domainName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "accountid",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "accountName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cpu",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "ram",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "storage",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "traffic",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191106165843",
+    "entityTableName": "private_cloud",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": [
+        "admindashboard",
+        "customerdashboard",
+        "privateCloud"
+    ],
+    "microserviceName": "privateCloud"
+}

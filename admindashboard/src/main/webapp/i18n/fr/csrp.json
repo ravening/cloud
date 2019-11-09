@@ -1,0 +1,26 @@
+{
+  "admindashboardApp": {
+    "csrp": {
+      "home": {
+        "title": "Csrps",
+        "createLabel": "Créer un nouveau Csrp",
+        "createOrEditLabel": "Créer ou éditer un Csrp",
+        "notFound": "Aucun Csrp trouvé"
+      },
+      "created": "Un nouveau Csrp a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Csrp avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Csrp avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Csrp {{ id }} ?"
+      },
+      "detail": {
+        "title": "Csrp"
+      },
+      "domainName": "Domain Name",
+      "cpu": "Cpu",
+      "ram": "Ram",
+      "storage": "Storage",
+      "traffic": "Traffic"
+    }
+  }
+}

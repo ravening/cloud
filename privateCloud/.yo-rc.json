@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "enableHibernateCache": true,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "messageBroker": false,
+    "nativeLanguage": "en",
+    "packageName": "com.rakeshv.hackathon.csrp",
+    "packageFolder": "com/rakeshv/hackathon/csrp",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "serviceDiscoveryType": "eureka",
+    "skipClient": true,
+    "testFrameworks": [],
+    "websocket": false,
+    "baseName": "privateCloud",
+    "applicationType": "microservice",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "serverPort": "8082",
+    "jhipsterVersion": "6.4.1",
+    "buildTool": "maven",
+    "skipUserManagement": true,
+    "clientPackageManager": "npm",
+    "jwtSecretKey": "MWU4YjhhNmM5YTQ2YTI3YjZjOWM2Y2M0NTQ3MjMzYTI3ZmE1NzhkYWNkNGI5YWFiYWY1ZjQ3M2IxNWZiZTdlNTZkNjU5Yjc3MTVhOTliYjI3MGZjMGU3OTUyNDIxOGE0N2FhNzQyMGU3OWQ0ZjA3NzBjM2M3YmQzZTc2MjdlZTA=",
+    "embeddableLaunchScript": false,
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "blueprints": []
+  },
+  "entities": [
+    "PrivateCloud"
+  ]
+}

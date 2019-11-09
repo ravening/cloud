@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-private-cloud-heading" jhiTranslate="admindashboardApp.privateCloudPrivateCloud.home.createOrEditLabel">Create or edit a Private Cloud</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="admindashboardApp.privateCloudPrivateCloud.domainName" for="field_domainName">Domain Name</label>
+                    <input type="text" class="form-control" name="domainName" id="field_domainName"
+                           formControlName="domainName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="admindashboardApp.privateCloudPrivateCloud.accountid" for="field_accountid">Accountid</label>
+                    <input type="number" class="form-control" name="accountid" id="field_accountid"
+                           formControlName="accountid"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="admindashboardApp.privateCloudPrivateCloud.accountName" for="field_accountName">Account Name</label>
+                    <input type="text" class="form-control" name="accountName" id="field_accountName"
+                           formControlName="accountName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="admindashboardApp.privateCloudPrivateCloud.cpu" for="field_cpu">Cpu</label>
+                    <input type="number" class="form-control" name="cpu" id="field_cpu"
+                           formControlName="cpu"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="admindashboardApp.privateCloudPrivateCloud.ram" for="field_ram">Ram</label>
+                    <input type="number" class="form-control" name="ram" id="field_ram"
+                           formControlName="ram"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="admindashboardApp.privateCloudPrivateCloud.storage" for="field_storage">Storage</label>
+                    <input type="number" class="form-control" name="storage" id="field_storage"
+                           formControlName="storage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="admindashboardApp.privateCloudPrivateCloud.traffic" for="field_traffic">Traffic</label>
+                    <input type="number" class="form-control" name="traffic" id="field_traffic"
+                           formControlName="traffic"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{
+  "customerdashboardApp": {
+    "orderServiceOrderCsrp": {
+      "home": {
+        "title": "Order Csrps",
+        "createLabel": "Create a new Order Csrp",
+        "createOrEditLabel": "Create or edit a Order Csrp",
+        "notFound": "No Order Csrps found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Order Csrp {{ id }}?"
+      },
+      "detail": {
+        "title": "Order Csrp"
+      },
+      "name": "Name",
+      "csrppack": "Csrppack"
+    }
+  },
+  "orderServiceApp": {
+    "orderServiceOrderCsrp": {
+      "created": "A new Order Csrp is created with identifier {{ param }}",
+      "updated": "A Order Csrp is updated with identifier {{ param }}",
+      "deleted": "A Order Csrp is deleted with identifier {{ param }}"
+    }
+  }
+}

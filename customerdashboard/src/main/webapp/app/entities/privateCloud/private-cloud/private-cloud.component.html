@@ -1,0 +1,78 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.home.title">Private Clouds</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-private-cloud" [routerLink]="['/private-cloud/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.home.createLabel">
+            Create a new Private Cloud
+            </span>
+        </button>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="privateClouds?.length === 0">
+        <span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.home.notFound">No privateClouds found</span>
+    </div>
+    <div class="table-responsive" *ngIf="privateClouds?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="domainName"><span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.domainName">Domain Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="accountid"><span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.accountid">Accountid</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="accountName"><span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.accountName">Account Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="cpu"><span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.cpu">Cpu</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="ram"><span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.ram">Ram</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="storage"><span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.storage">Storage</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="traffic"><span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.traffic">Traffic</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let privateCloud of privateClouds ;trackBy: trackId">
+                <td><a [routerLink]="['/private-cloud', privateCloud.id, 'view' ]">{{privateCloud.id}}</a></td>
+                <td>{{privateCloud.domainName}}</td>
+                <td>{{privateCloud.accountid}}</td>
+                <td>{{privateCloud.accountName}}</td>
+                <td>{{privateCloud.cpu}}</td>
+                <td>{{privateCloud.ram}}</td>
+                <td>{{privateCloud.storage}}</td>
+                <td>{{privateCloud.traffic}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/private-cloud', privateCloud.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/private-cloud', privateCloud.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/private-cloud', { outlets: { popup: privateCloud.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div [hidden]="privateClouds?.length === 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

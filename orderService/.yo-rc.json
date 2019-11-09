@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "enableHibernateCache": true,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "messageBroker": false,
+    "nativeLanguage": "en",
+    "packageName": "com.rakeshv.hackathon.orders",
+    "packageFolder": "com/rakeshv/hackathon/orders",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "serviceDiscoveryType": "eureka",
+    "skipClient": true,
+    "testFrameworks": [],
+    "websocket": false,
+    "baseName": "orderService",
+    "applicationType": "microservice",
+    "authenticationType": "jwt",
+    "serverPort": "8085",
+    "jhipsterVersion": "6.4.1",
+    "buildTool": "maven",
+    "skipUserManagement": true,
+    "clientPackageManager": "npm",
+    "cacheProvider": "hazelcast",
+    "jwtSecretKey": "Zjk3MWFkNzkxNTQxOTdjMTZiMmFkZDI0YzRiZjIwNjVmZWI0NDM0ZWJlYTRiNTFjZGFjMTI3MjFkYWIzNDYwZDhjZDcxYmVlMjEwZWRmN2Y4MzlmMDBmZjQ1Mzk5ZThhNmI1NzYxYTM1ZGEyMDc4OGI2ZmRmZWE2MmQxZmVlMDk=",
+    "embeddableLaunchScript": false,
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "blueprints": []
+  },
+  "entities": [
+    "OrderVps",
+    "OrderCsrp"
+  ]
+}

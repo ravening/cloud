@@ -1,0 +1,32 @@
+{
+  "customerdashboardApp": {
+    "privateCloudPrivateCloud": {
+      "home": {
+        "title": "Private Clouds",
+        "createLabel": "Create a new Private Cloud",
+        "createOrEditLabel": "Create or edit a Private Cloud",
+        "notFound": "No Private Clouds found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Private Cloud {{ id }}?"
+      },
+      "detail": {
+        "title": "Private Cloud"
+      },
+      "domainName": "Domain Name",
+      "accountid": "Accountid",
+      "accountName": "Account Name",
+      "cpu": "Cpu",
+      "ram": "Ram",
+      "storage": "Storage",
+      "traffic": "Traffic"
+    }
+  },
+  "privateCloudApp": {
+    "privateCloudPrivateCloud": {
+      "created": "A new Private Cloud is created with identifier {{ param }}",
+      "updated": "A Private Cloud is updated with identifier {{ param }}",
+      "deleted": "A Private Cloud is deleted with identifier {{ param }}"
+    }
+  }
+}

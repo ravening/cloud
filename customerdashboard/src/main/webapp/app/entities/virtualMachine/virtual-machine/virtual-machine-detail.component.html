@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="virtualMachine">
+            <h2><span jhiTranslate="customerdashboardApp.virtualMachineVirtualMachine.detail.title">Virtual Machine</span> {{virtualMachine.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="customerdashboardApp.virtualMachineVirtualMachine.name">Name</span></dt>
+                <dd>
+                    <span>{{virtualMachine.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="customerdashboardApp.virtualMachineVirtualMachine.accountid">Accountid</span></dt>
+                <dd>
+                    <span>{{virtualMachine.accountid}}</span>
+                </dd>
+                <dt><span jhiTranslate="customerdashboardApp.virtualMachineVirtualMachine.accountName">Account Name</span></dt>
+                <dd>
+                    <span>{{virtualMachine.accountName}}</span>
+                </dd>
+                <dt><span jhiTranslate="customerdashboardApp.virtualMachineVirtualMachine.cpu">Cpu</span></dt>
+                <dd>
+                    <span>{{virtualMachine.cpu}}</span>
+                </dd>
+                <dt><span jhiTranslate="customerdashboardApp.virtualMachineVirtualMachine.ram">Ram</span></dt>
+                <dd>
+                    <span>{{virtualMachine.ram}}</span>
+                </dd>
+                <dt><span jhiTranslate="customerdashboardApp.virtualMachineVirtualMachine.disk">Disk</span></dt>
+                <dd>
+                    <span>{{virtualMachine.disk}}</span>
+                </dd>
+                <dt><span jhiTranslate="customerdashboardApp.virtualMachineVirtualMachine.traffic">Traffic</span></dt>
+                <dd>
+                    <span>{{virtualMachine.traffic}}</span>
+                </dd>
+                <dt><span jhiTranslate="customerdashboardApp.virtualMachineVirtualMachine.template">Template</span></dt>
+                <dd>
+                    <span>{{virtualMachine.template}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/virtual-machine', virtualMachine.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

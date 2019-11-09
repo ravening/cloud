@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "enableHibernateCache": true,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "messageBroker": false,
+    "nativeLanguage": "en",
+    "packageName": "com.rakeshv.hackathon.vps",
+    "packageFolder": "com/rakeshv/hackathon/vps",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "serviceDiscoveryType": "eureka",
+    "skipClient": true,
+    "testFrameworks": [],
+    "websocket": false,
+    "baseName": "virtualMachine",
+    "applicationType": "microservice",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "serverPort": "8081",
+    "jhipsterVersion": "6.4.1",
+    "buildTool": "maven",
+    "skipUserManagement": true,
+    "clientPackageManager": "npm",
+    "jwtSecretKey": "MGUzZDYzMjhiNDRkOGE0ZGJiY2Q1NjEzN2Q5YjY3YzEzNTU5ZmI4MTI4OWQ3N2M1ZTZiMGRhMTM4NzVlZDQ5Zjk2MDU1YmY0NWUyYjVlYmFlZTdkYzQxYTcxMzYxOGYwOTczMDM1MzFmMWM2ODI0ZGI4YWUzMTNlNjYwMjVhNTY=",
+    "embeddableLaunchScript": false,
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "blueprints": []
+  },
+  "entities": [
+    "VirtualMachine"
+  ]
+}

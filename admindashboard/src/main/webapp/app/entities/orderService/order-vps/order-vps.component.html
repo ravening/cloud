@@ -1,0 +1,68 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="admindashboardApp.orderServiceOrderVps.home.title">Order Vps</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-order-vps" [routerLink]="['/order-vps/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="admindashboardApp.orderServiceOrderVps.home.createLabel">
+            Create a new Order Vps
+            </span>
+        </button>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="orderVps?.length === 0">
+        <span jhiTranslate="admindashboardApp.orderServiceOrderVps.home.notFound">No orderVps found</span>
+    </div>
+    <div class="table-responsive" *ngIf="orderVps?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="name"><span jhiTranslate="admindashboardApp.orderServiceOrderVps.name">Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"  jhiSortBy="vpspack"><span jhiTranslate="admindashboardApp.orderServiceOrderVps.vpspack">Vpspack</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let orderVps of orderVps ;trackBy: trackId">
+                <td><a [routerLink]="['/order-vps', orderVps.id, 'view' ]">{{orderVps.id}}</a></td>
+                <td>{{orderVps.name}}</td>
+                <td>{{orderVps.vpspack}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/order-vps', orderVps.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/order-vps', orderVps.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/order-vps', { outlets: { popup: orderVps.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div [hidden]="orderVps?.length === 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="privateCloud">
+            <h2><span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.detail.title">Private Cloud</span> {{privateCloud.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.domainName">Domain Name</span></dt>
+                <dd>
+                    <span>{{privateCloud.domainName}}</span>
+                </dd>
+                <dt><span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.accountid">Accountid</span></dt>
+                <dd>
+                    <span>{{privateCloud.accountid}}</span>
+                </dd>
+                <dt><span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.accountName">Account Name</span></dt>
+                <dd>
+                    <span>{{privateCloud.accountName}}</span>
+                </dd>
+                <dt><span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.cpu">Cpu</span></dt>
+                <dd>
+                    <span>{{privateCloud.cpu}}</span>
+                </dd>
+                <dt><span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.ram">Ram</span></dt>
+                <dd>
+                    <span>{{privateCloud.ram}}</span>
+                </dd>
+                <dt><span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.storage">Storage</span></dt>
+                <dd>
+                    <span>{{privateCloud.storage}}</span>
+                </dd>
+                <dt><span jhiTranslate="customerdashboardApp.privateCloudPrivateCloud.traffic">Traffic</span></dt>
+                <dd>
+                    <span>{{privateCloud.traffic}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/private-cloud', privateCloud.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

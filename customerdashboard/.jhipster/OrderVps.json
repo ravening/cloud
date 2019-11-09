@@ -1,0 +1,29 @@
+{
+    "name": "OrderVps",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "vpspack",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191106165844",
+    "entityTableName": "order_vps",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": [
+        "admindashboard",
+        "customerdashboard",
+        "orderService"
+    ],
+    "microserviceName": "orderService"
+}

@@ -1,0 +1,21 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "admindashboard",
+      "cloudStack",
+      "customerAccount",
+      "customerdashboard",
+      "orderService",
+      "privateCloud",
+      "virtualMachine"
+    ],
+    "directoryPath": "../",
+    "gatewayType": "zuul",
+    "monitoring": "elk",
+    "consoleOptions": [
+      "zipkin"
+    ],
+    "serviceDiscoveryType": "eureka",
+    "jwtSecretKey": "NDFjZWNlOWYyM2Y4NTVjMWFkNWY0MWI2NGY3NDIzZjQ4ZTA0YmY4NWQ4NmJkNzc4Zjk3NDAwNWE1OTg3YWI2ZjYyMmUzZjFlY2VjZTgyNWVhMGIzN2ZmMjA0MzVjNWZlYTVkOQ=="
+  }
+}

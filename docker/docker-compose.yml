@@ -1,0 +1,182 @@
+version: '2'
+services:
+  admindashboard-app:
+    image: admindashboard
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - 'SPRING_PROFILES_ACTIVE=prod,swagger'
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - 'EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka'
+      - 'SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config'
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://admindashboard-mysql:3306/admindashboard?useUnicode=true&characterEncoding=utf8&useSSL=false'
+      - JHIPSTER_SLEEP=30
+      - JHIPSTER_REGISTRY_PASSWORD=admin
+    ports:
+      - '8080:9090'
+  admindashboard-mysql:
+    image: 'mysql:8.0.17'
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=admindashboard
+    command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: 'rabbitmq:3-management'
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  cloudstack-app:
+    image: cloudstack
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - 'SPRING_PROFILES_ACTIVE=prod,swagger'
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - 'EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka'
+      - 'SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config'
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://cloudstack-mysql:3306/cloudstack?useUnicode=true&characterEncoding=utf8&useSSL=false'
+      - JHIPSTER_SLEEP=30
+      - JHIPSTER_REGISTRY_PASSWORD=admin
+  cloudstack-mysql:
+    image: 'mysql:8.0.17'
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=cloudstack
+    command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
+
+  customeraccount-app:
+    image: customeraccount
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - 'SPRING_PROFILES_ACTIVE=prod,swagger'
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - 'EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka'
+      - 'SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config'
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://customeraccount-mysql:3306/customeraccount?useUnicode=true&characterEncoding=utf8&useSSL=false'
+      - JHIPSTER_SLEEP=30
+      - JHIPSTER_REGISTRY_PASSWORD=admin
+  customeraccount-mysql:
+    image: 'mysql:8.0.17'
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=customeraccount
+    command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
+
+  customerdashboard-app:
+    image: customerdashboard
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - 'SPRING_PROFILES_ACTIVE=prod,swagger'
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - 'EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka'
+      - 'SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config'
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://customerdashboard-mysql:3306/customerdashboard?useUnicode=true&characterEncoding=utf8&useSSL=false'
+      - JHIPSTER_SLEEP=30
+      - JHIPSTER_REGISTRY_PASSWORD=admin
+    ports:
+      - '8081:8080'
+  customerdashboard-mysql:
+    image: 'mysql:8.0.17'
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=customerdashboard
+    command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
+
+  orderservice-app:
+    image: orderservice
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - 'SPRING_PROFILES_ACTIVE=prod,swagger'
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - 'EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka'
+      - 'SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config'
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://orderservice-mysql:3306/orderservice?useUnicode=true&characterEncoding=utf8&useSSL=false'
+      - JHIPSTER_SLEEP=30
+      - JHIPSTER_REGISTRY_PASSWORD=admin
+  orderservice-mysql:
+    image: 'mysql:8.0.17'
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=orderservice
+    command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
+
+  privatecloud-app:
+    image: privatecloud
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - 'SPRING_PROFILES_ACTIVE=prod,swagger'
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - 'EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka'
+      - 'SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config'
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://privatecloud-mysql:3306/privatecloud?useUnicode=true&characterEncoding=utf8&useSSL=false'
+      - JHIPSTER_SLEEP=30
+      - JHIPSTER_REGISTRY_PASSWORD=admin
+  privatecloud-mysql:
+    image: 'mysql:8.0.17'
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=privatecloud
+    command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
+
+  virtualmachine-app:
+    image: virtualmachine
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - 'SPRING_PROFILES_ACTIVE=prod,swagger'
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - 'EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka'
+      - 'SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config'
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://virtualmachine-mysql:3306/virtualmachine?useUnicode=true&characterEncoding=utf8&useSSL=false'
+      - JHIPSTER_SLEEP=30
+      - JHIPSTER_REGISTRY_PASSWORD=admin
+  virtualmachine-mysql:
+    image: 'mysql:8.0.17'
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=virtualmachine
+    command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
+
+  jhipster-registry:
+    extends:
+      file: jhipster-registry.yml
+      service: jhipster-registry
+
+  jhipster-elasticsearch:
+    extends:
+      file: jhipster-console.yml
+      service: jhipster-elasticsearch
+  jhipster-logstash:
+    extends:
+      file: jhipster-console.yml
+      service: jhipster-logstash
+    depends_on:
+      - jhipster-elasticsearch
+  jhipster-console:
+    extends:
+      file: jhipster-console.yml
+      service: jhipster-console
+    depends_on:
+      - jhipster-elasticsearch
+  jhipster-import-dashboards:
+    extends:
+      file: jhipster-console.yml
+      service: jhipster-import-dashboards
+    depends_on:
+      - jhipster-elasticsearch
+  jhipster-zipkin:
+    extends:
+      file: jhipster-console.yml
+      service: jhipster-zipkin
+    depends_on:
+      - jhipster-elasticsearch

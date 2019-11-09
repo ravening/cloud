@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="csrp">
+            <h2><span jhiTranslate="admindashboardApp.csrp.detail.title">Csrp</span> {{csrp.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="admindashboardApp.csrp.domainName">Domain Name</span></dt>
+                <dd>
+                    <span>{{csrp.domainName}}</span>
+                </dd>
+                <dt><span jhiTranslate="admindashboardApp.csrp.cpu">Cpu</span></dt>
+                <dd>
+                    <span>{{csrp.cpu}}</span>
+                </dd>
+                <dt><span jhiTranslate="admindashboardApp.csrp.ram">Ram</span></dt>
+                <dd>
+                    <span>{{csrp.ram}}</span>
+                </dd>
+                <dt><span jhiTranslate="admindashboardApp.csrp.storage">Storage</span></dt>
+                <dd>
+                    <span>{{csrp.storage}}</span>
+                </dd>
+                <dt><span jhiTranslate="admindashboardApp.csrp.traffic">Traffic</span></dt>
+                <dd>
+                    <span>{{csrp.traffic}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/csrp', csrp.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

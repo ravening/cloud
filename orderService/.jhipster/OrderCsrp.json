@@ -1,0 +1,29 @@
+{
+    "name": "OrderCsrp",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "csrppack",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191106165845",
+    "entityTableName": "order_csrp",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": [
+        "admindashboard",
+        "customerdashboard",
+        "orderService"
+    ],
+    "microserviceName": "orderService"
+}

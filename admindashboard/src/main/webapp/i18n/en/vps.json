@@ -1,0 +1,27 @@
+{
+  "admindashboardApp": {
+    "vps": {
+      "home": {
+        "title": "Vps",
+        "createLabel": "Create a new Vps",
+        "createOrEditLabel": "Create or edit a Vps",
+        "notFound": "No Vps found"
+      },
+      "created": "A new Vps is created with identifier {{ param }}",
+      "updated": "A Vps is updated with identifier {{ param }}",
+      "deleted": "A Vps is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vps {{ id }}?"
+      },
+      "detail": {
+        "title": "Vps"
+      },
+      "name": "Name",
+      "cpu": "Cpu",
+      "ram": "Ram",
+      "disk": "Disk",
+      "traffic": "Traffic",
+      "template": "Template"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "enableHibernateCache": true,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "messageBroker": false,
+    "nativeLanguage": "en",
+    "packageName": "com.rakeshv.hackathon.account",
+    "packageFolder": "com/rakeshv/hackathon/account",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "serviceDiscoveryType": "eureka",
+    "skipClient": true,
+    "testFrameworks": [],
+    "websocket": false,
+    "baseName": "customerAccount",
+    "applicationType": "microservice",
+    "authenticationType": "jwt",
+    "serverPort": "8084",
+    "jhipsterVersion": "6.4.1",
+    "buildTool": "maven",
+    "skipUserManagement": true,
+    "clientPackageManager": "npm",
+    "cacheProvider": "hazelcast",
+    "jwtSecretKey": "NjExNDQxYWE0ZTc4OTdkYzQyMDE1N2VkYzJhZjA5MmMyZGE2Y2YwOWVkMzFhNmQ0YTc3MDkwYzA5YzIxZjg3ZWI5ZTVmYjk4YzVlOWFmNzJlNmZmNjNhNDBmZWZmMDAyMWJkNTIwMWNjNzg2YTJjMDg4NTVjMGQ2MzE4OTJlNzg=",
+    "embeddableLaunchScript": false,
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "blueprints": []
+  },
+  "entities": [
+    "UserAccount"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "customerdashboardApp": {
+    "userAccount": {
+      "home": {
+        "title": "UserAccounts",
+        "createLabel": "Créer un nouveau User Account",
+        "createOrEditLabel": "Créer ou éditer un User Account",
+        "notFound": "Aucun User Account trouvé"
+      },
+      "created": "Un nouveau User Account a été créé avec l'identifiant {{ param }}",
+      "updated": "Le User Account avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le User Account avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le User Account {{ id }} ?"
+      },
+      "detail": {
+        "title": "User Account"
+      },
+      "name": "Name",
+      "domainName": "Domain Name",
+      "email": "Email"
+    }
+  }
+}

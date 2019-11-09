@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "enableHibernateCache": false,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "messageBroker": false,
+    "nativeLanguage": "en",
+    "packageName": "com.rakeshv.hackathon.cloudstack",
+    "packageFolder": "com/rakeshv/hackathon/cloudstack",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "serviceDiscoveryType": "eureka",
+    "skipClient": true,
+    "testFrameworks": [],
+    "websocket": false,
+    "baseName": "cloudStack",
+    "applicationType": "microservice",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "serverPort": "8083",
+    "jhipsterVersion": "6.4.1",
+    "buildTool": "maven",
+    "skipUserManagement": true,
+    "clientPackageManager": "npm",
+    "jwtSecretKey": "ZjM1ZjAyMjNjMjk2ZmE4YzAzNjYwNmFhNGEzNzViNWViMzk5ZTNjM2FmZjE0ZTIwMDcxNGI2NzI1ZTUyZGNlNGQwYTA5YWYxZWRmNTNjZDg0ODU1NGI3MGY2MmNmOGY3OGE1ODNjYjVjNzQ1MGU4ZDBjYjg1YzdiNjJhY2M1MzI=",
+    "embeddableLaunchScript": false,
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "blueprints": []
+  },
+  "entities": []
+}

@@ -1,0 +1,27 @@
+{
+  "admindashboardApp": {
+    "orderServiceOrderCsrp": {
+      "home": {
+        "title": "OrderCsrps",
+        "createLabel": "Créer un nouveau Order Csrp",
+        "createOrEditLabel": "Créer ou éditer un Order Csrp",
+        "notFound": "Aucun Order Csrp trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Order Csrp {{ id }} ?"
+      },
+      "detail": {
+        "title": "Order Csrp"
+      },
+      "name": "Name",
+      "csrppack": "Csrppack"
+    }
+  },
+  "orderServiceApp": {
+    "orderServiceOrderCsrp": {
+      "created": "Un nouveau Order Csrp a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Order Csrp avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Order Csrp avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}
