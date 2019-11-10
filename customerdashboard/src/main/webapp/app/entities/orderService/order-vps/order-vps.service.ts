@@ -15,7 +15,6 @@ export class OrderVpsService {
   constructor(protected http: HttpClient) {}
 
   create(orderVps: IOrderVps): Observable<EntityResponseType> {
-    console.log('sending a post request');
     return this.http.post<IOrderVps>(this.resourceUrl, orderVps, { observe: 'response' });
   }
 
@@ -37,7 +36,6 @@ export class OrderVpsService {
   }
 
   orderVps() {
-    console.log('sending the get request');
     return this.http.get(this.resourceUrl);
   }
 }

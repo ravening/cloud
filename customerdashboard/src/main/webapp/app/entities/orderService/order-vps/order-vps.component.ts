@@ -47,7 +47,6 @@ export class OrderVpsComponent implements OnInit, OnDestroy {
       this.reverse = data.pagingParams.ascending;
       this.predicate = data.pagingParams.predicate;
     });
-    console.log('=-------coming inside constructor------');
   }
 
   loadAll() {
@@ -58,7 +57,6 @@ export class OrderVpsComponent implements OnInit, OnDestroy {
         sort: this.sort()
       })
       .subscribe((res: HttpResponse<IOrderVps[]>) => this.paginateOrderVps(res.body, res.headers));
-    console.log('=-------loading all the stuff------');
   }
 
   loadPage(page: number) {
@@ -66,7 +64,6 @@ export class OrderVpsComponent implements OnInit, OnDestroy {
       this.previousPage = page;
       this.transition();
     }
-    console.log('=-------loading all page------');
   }
 
   transition() {
@@ -98,7 +95,6 @@ export class OrderVpsComponent implements OnInit, OnDestroy {
       this.currentAccount = account;
     });
     this.registerChangeInOrderVps();
-    console.log('=-------in init component------');
   }
 
   ngOnDestroy() {
@@ -122,19 +118,13 @@ export class OrderVpsComponent implements OnInit, OnDestroy {
   }
 
   protected paginateOrderVps(data: IOrderVps[], headers: HttpHeaders) {
-    console.log('=-------paginating------');
-    console.log('-----recived data --- ' + data);
     this.links = this.parseLinks.parse(headers.get('link'));
     this.totalItems = parseInt(headers.get('X-Total-Count'), 10);
     this.orderVps = data;
-    console.log('this.ordervps is ' + this.orderVps);
   }
 
   ordervps(id: number) {
-    console.log('received id number : ' + id);
-    console.log('creating a new vps');
-    this.vps = new OrderVps("S", 1);
+    this.vps = new OrderVps('S', 1);
     this.orderVpsService.create(this.vps);
-    console.log('request sent');
   }
 }
