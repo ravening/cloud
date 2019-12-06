@@ -85,6 +85,34 @@ cd docker-compose
 docker-compose up -d
 ```
 
+## Generating the application to deploy in kubernets
+
+1 . Create the fresh microservice by importing from kubernetes.yml file
+```bash
+jhipster import-jdl kubernetes.yml
+```
+
+2 . Once the application is generated, create the docker image for each microservice
+```bash
+./mvnw -ntp -Pprod verify jib:dockerBuild -DskipTests
+```
+
+3 . Alternatively, you can build and push docker image using
+```bash
+./mvnw -ntp -Pprod verify jib:build -Djib.to.image=rakgenius/<microservice name>
+```
+
+4 . Once the docker images are pushed, deploy the kubernetes application
+```bash
+bash kubectl-apply.sh
+```
+
+5. Get the application IP address using
+```bash
+kubectl get svc admindashboard -n jhipster
+```
+
+
 ## Built With
 
 * [Maven](https://maven.apache.org/) - Dependency Management
