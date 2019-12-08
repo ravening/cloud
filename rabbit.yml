@@ -1,0 +1,44 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: rabbitmq
+  namespace: jhipster
+  labels:
+    app: rabbitmq
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rabbitmq
+      serviceType: message-broker
+  template:
+    metadata:
+      name: rabbitmq
+      labels:
+        app: rabbitmq
+        serviceType: message-broker
+    spec:
+      containers:
+        - name: rabbitmq
+          image: rabbitmq:management
+          ports:
+          - containerPort: 5672
+          - containerPort: 15672
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq
+  namespace: jhipster
+spec:
+  selector:
+    serviceType: message-broker
+    app: rabbitmq
+  ports:
+    - port: 5672
+      name: broker
+      targetPort: 5672
+    - port: 15672
+      name: admin
+      targetPort: 15672
+  type: ClusterIP
